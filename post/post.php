@@ -10,7 +10,7 @@ if(isset($_POST))
     $user_id=$_SESSION['id'];
 
     $post_photo=$_FILES['photo']['name'];
-    $tmp=$_FILES['photo']['tmp_name']; //type,sizE
+    $tmp=$_FILES['photo']['tmp_name']; //type,size
     if($post_photo)
     {
         $post_photo=uniqid()."_".$_FILES['photo']['name'];

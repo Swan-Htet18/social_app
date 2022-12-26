@@ -10,9 +10,9 @@
       </div>
       <div class="modal-body">
         <form method="POST" enctype="multipart/form-data" action="post/post.php">
-        	<input type="text" name="title" placeholder="Enter Title" class="form-control"><br>
-        	<textarea name="description" placeholder="What's on your mind?" class="form-control"></textarea><br>
-        	<b>Photo : </b><input type="file" name="photo">
+          <input type="text" name="title" placeholder="Enter Title" class="form-control"><br>
+          <textarea name="description" placeholder="What's on your mind?" class="form-control"></textarea><br>
+          <b>Photo : </b><input type="file" name="photo">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -37,8 +37,10 @@
         <form method="POST" action="post/update.php" enctype="multipart/form-data">
           <input type="" name="id" class="id">
           <input type="" name="old" class="old">
+          <input name="delete_photo" class="delete_photo">
           <input type="text" name="title" placeholder="Enter Title" class="form-control title"><br>
           <textarea name="description" placeholder="What's on your mind?" class="form-control description"></textarea><br>
+          <button type="button" class="dp_btn btn btn-danger mb-2">delete photo</button>
           <img src="" class="w-100 post_photo">
           <b>Photo : </b><input type="file" name="photo">
       </div>
@@ -94,55 +96,57 @@
         <ul class="list-group mt-2">
           <li class="list-group-item py-1 bg-light">
             <a href="" class="card-link text-dark">
-            <b class="mr-2">Cras justo odio</b>
-            <small> Live in: Yangon</small>
-            <img src="img/4.png" class="rounded-circle float-right" width="50px" height="50px">
+              <b class="mr-2">Cras justo odio</b>
+              <small> Live in: Yangon</small>
+              <img src="img/4.png" class="rounded-circle float-right" width="50px" height="50px">
             </a>
           </li>
           <li class="list-group-item py-1 bg-light">
             <a href="" class="card-link text-dark">
-            <b class="mr-2">Cras justo odio</b>
-            <small> Live in: Yangon</small>
-            <img src="img/4.png" class="rounded-circle float-right" width="50px" height="50px">
+              <b class="mr-2">Cras justo odio</b>
+              <small> Live in: Yangon</small>
+              <img src="img/4.png" class="rounded-circle float-right" width="50px" height="50px">
             </a>
           </li>
-       </ul>
+        </ul>
 
-       <br>
+        <br>
 
-      <div class="bg-light">
-       <div class="media border">
-        <a href="" class="card-link text-dark">
-        <div class="media-left">
-          <img src="img/test.jpg" class="media-object my-2 ml-2" width="120px">
-        </div>
-        <div class="media-body ml-2">
-          <!-- <h6 class="media-heading mt-3">Media Middle</h6> -->
-          <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit,amet, consectet</small></a><br>
+        <div class="bg-light">
+          <div class="media border">
+            <a href="" class="card-link text-dark">
+              <div class="media-left">
+                <img src="img/test.jpg" class="media-object my-2 ml-2" width="120px">
+              </div>
+              <div class="media-body ml-2">
+                <!-- <h6 class="media-heading mt-3">Media Middle</h6> -->
+                <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit,amet, consectet</small>
+            </a><br>
 
-          <a href="" class="text-dark"><small>Posted by : <b>David</b></small>
-          <img src="img/4.png" class="rounded-circle float-right mr-2 mb-1" width="30px">
-          </a>
-        </div>
+            <a href="" class="text-dark"><small>Posted by : <b>David</b></small>
+              <img src="img/4.png" class="rounded-circle float-right mr-2 mb-1" width="30px">
+            </a>
+          </div>
         </div>
 
         <div class="media border">
-        <a href="" class="card-link text-dark">
-        <div class="media-left">
-          <img src="img/test.jpg" class="media-object my-2 ml-2" width="120px">
-        </div>
-        <div class="media-body ml-2">
-          <!-- <h6 class="media-heading mt-3">Media Middle</h6> -->
-          <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit,amet, consectet</small></a><br>
+          <a href="" class="card-link text-dark">
+            <div class="media-left">
+              <img src="img/test.jpg" class="media-object my-2 ml-2" width="120px">
+            </div>
+            <div class="media-body ml-2">
+              <!-- <h6 class="media-heading mt-3">Media Middle</h6> -->
+              <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit,amet, consectet</small>
+          </a><br>
 
           <a href="" class="text-dark"><small>Posted by : <b>David</b></small>
-          <img src="img/4.png" class="rounded-circle float-right mr-2 mb-1" width="30px">
+            <img src="img/4.png" class="rounded-circle float-right mr-2 mb-1" width="30px">
           </a>
         </div>
-        </div>
-      </div>
-
       </div>
     </div>
+
   </div>
+</div>
+</div>
 </div>

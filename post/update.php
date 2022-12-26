@@ -10,6 +10,7 @@ if(isset($_POST))
     $photo=$_FILES['photo']['name'];
     $tmp=$_FILES['photo']['tmp_name'];
     $old=$_POST['old'];
+    $delete_photo=$_POST['delete_photo'];
     
     if($photo)
     {
@@ -17,7 +18,11 @@ if(isset($_POST))
         $photo=uniqid()."_".$photo;
         move_uploaded_file($tmp,"../img/$photo");
         mysqli_query($conn,"UPDATE post SET title='$title',description='$description',post_photo='$photo',modified_date=now() WHERE id=$id");
-    }else {
+    }else if($delete_photo){
+        unlink("../img/".$delete_photo);
+        mysqli_query($conn,"UPDATE post SET title='$title',description='$description',post_photo='',modified_date=now() WHERE id=$id");
+    }
+    else{
         mysqli_query($conn,"UPDATE post SET title='$title',description='$description',modified_date=now() WHERE id=$id");
     }
     header("location:../home.php");
